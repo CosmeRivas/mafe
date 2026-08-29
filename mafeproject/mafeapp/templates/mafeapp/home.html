@@ -1,0 +1,89 @@
+{% extends 'mafeapp/base.html' %}
+{% block title %}MAFE Solucions | Trámites legales para extranjeros y nacionales{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <span class="badge">Gestoría de confianza</span>
+            <h1>Tramitamos tu documentación legal, tú enfócate en tu proyecto de vida</h1>
+            <p>Ayudamos a extranjeros y nacionales con pasaportes, visados, residencias, registro de impuestos, carnet de emprendedor y creación de negocios.</p>
+            <div class="hero-actions">
+                <a href="#contacto" class="btn btn-primary">Solicitar cita</a>
+                <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <i class="fa-solid fa-passport"></i>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container stats-inner">
+        <div class="stat">
+            <span class="stat-number">+500</span>
+            <span class="stat-label">Trámites gestionados</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">+10</span>
+            <span class="stat-label">Años de experiencia</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">+15</span>
+            <span class="stat-label">Nacionalidades atendidas</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Clientes satisfechos</span>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="servicios">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Nuestros servicios</span>
+            <h2>Todo lo que necesitas para tu tramitación</h2>
+            <p>Acompañamos a nuestros clientes en cada etapa del proceso legal y administrativo.</p>
+        </div>
+        <div class="services-grid">
+            {% for servicio in servicios %}
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid {{ servicio.icono }}"></i>
+                </div>
+                <h3>{{ servicio.titulo }}</h3>
+                <p>{{ servicio.descripcion }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="about" id="nosotros">
+    <div class="container about-inner">
+        <div class="about-image">
+            <i class="fa-solid fa-people-group"></i>
+        </div>
+        <div class="about-text">
+            <span class="eyebrow">Sobre nosotros</span>
+            <h2>Especialistas en trámites para extranjeros y nacionales</h2>
+            <p>En MAFE Solucions contamos con un equipo de asesores especializados en migración y trámites legales. Trabajamos de la mano contigo para que cada gestión sea rápida, segura y sin complicaciones.</p>
+            <ul class="checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Asesoría personalizada en cada trámite</li>
+                <li><i class="fa-solid fa-circle-check"></i> Seguimiento constante del estado de tu proceso</li>
+                <li><i class="fa-solid fa-circle-check"></i> Atención en español, inglés y francés</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container cta-inner">
+        <h2>¿Listo para empezar tu trámite?</h2>
+        <p>Agenda una cita con nuestros asesores y resuelve tu situación legal sin complicaciones.</p>
+        <a href="tel:+18090000000" class="btn btn-primary">Llámanos ahora</a>
+    </div>
+</section>
+{% endblock %}

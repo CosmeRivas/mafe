@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MAFE Solucions{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'mafeapp/css/style.css' %}">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="{% url 'mafeapp:home' %}" class="logo">MAFE<span>Solucions</span></a>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="{% url 'mafeapp:home' %}">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary nav-cta">Solicitar cita</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer" id="contacto">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <a href="{% url 'mafeapp:home' %}" class="logo">MAFE<span>Solucions</span></a>
+                <p>Tramitación de documentación legal para extranjeros y nacionales. Confianza, rapidez y acompañamiento en cada paso.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li>Pasaportes</li>
+                    <li>Visados</li>
+                    <li>Residencias</li>
+                    <li>Registro de Impuestos</li>
+                    <li>Carnet de Emprendedor</li>
+                    <li>Creación de Negocios</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +240 222 889 274</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@mafesolucions.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Santo Domingo, República Dominicana</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {% now "Y" %} MAFE Solucions. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="{% static 'mafeapp/js/main.js' %}"></script>
+</body>
+</html>
