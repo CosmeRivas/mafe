@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zeb@r3wmo4%t7h564h%jvpcn7k(k5c(8t!!ez_n0&*%#hr=-pi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '31.97.196.232:8003', 'mafesolucions.com', 'www.mafesolucions.com']
 
 
 # Application definition
