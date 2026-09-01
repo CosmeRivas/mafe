@@ -13,7 +13,9 @@
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a href="{% url 'mafeapp:home' %}" class="logo">MAFE<span>Solutions</span></a>
+            <a href="{% url 'mafeapp:home' %}" class="logo" aria-label="MAFE Solutions">
+                <img src="{% static 'mafeapp/img/logo.png' %}" alt="MAFE Solutions">
+            </a>
             <nav class="main-nav">
                 <button class="nav-toggle" aria-label="Abrir menú">
                     <i class="fa-solid fa-bars"></i>
@@ -36,7 +38,9 @@
     <footer class="site-footer" id="contacto">
         <div class="container footer-inner">
             <div class="footer-col">
-                <a href="{% url 'mafeapp:home' %}" class="logo">MAFE<span>Solutions</span></a>
+                <a href="{% url 'mafeapp:home' %}" class="logo" aria-label="MAFE Solutions">
+                    <img src="{% static 'mafeapp/img/logo.png' %}" alt="MAFE Solutions">
+                </a>
                 <p>Consultoría administrativa, gestión documental, asesoramiento fiscal y cumplimiento migratorio.</p>
             </div>
             <div class="footer-col">

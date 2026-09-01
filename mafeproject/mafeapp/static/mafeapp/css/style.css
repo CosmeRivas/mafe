@@ -78,13 +78,17 @@ ul {
 }
 
 .logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.logo span {
-    color: var(--color-accent);
+.logo img {
+    display: block;
+    width: auto;
+    height: 54px;
+    max-width: 210px;
+    object-fit: contain;
 }
 
 .main-nav {
@@ -391,6 +395,7 @@ ul {
 
 .footer-col p {
     max-width: 320px;
+    margin-top: 1rem;
 }
 
 .footer-col ul li {
@@ -452,5 +457,10 @@ ul {
 
     .hero-text h1 {
         font-size: 2rem;
+    }
+
+    .logo img {
+        height: 44px;
+        max-width: 170px;
     }
 }
