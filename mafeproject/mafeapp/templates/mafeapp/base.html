@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}MAFE Solucions{% endblock %}</title>
+    <title>{% block title %}MAFE Solutions{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -13,7 +13,7 @@
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a href="{% url 'mafeapp:home' %}" class="logo">MAFE<span>Solucions</span></a>
+            <a href="{% url 'mafeapp:home' %}" class="logo">MAFE<span>Solutions</span></a>
             <nav class="main-nav">
                 <button class="nav-toggle" aria-label="Abrir menú">
                     <i class="fa-solid fa-bars"></i>
@@ -36,8 +36,8 @@
     <footer class="site-footer" id="contacto">
         <div class="container footer-inner">
             <div class="footer-col">
-                <a href="{% url 'mafeapp:home' %}" class="logo">MAFE<span>Solucions</span></a>
-                <p>Tramitación de documentación legal para extranjeros y nacionales. Confianza, rapidez y acompañamiento en cada paso.</p>
+                <a href="{% url 'mafeapp:home' %}" class="logo">MAFE<span>Solutions</span></a>
+                <p>Consultoría administrativa, gestión documental, asesoramiento fiscal y cumplimiento migratorio.</p>
             </div>
             <div class="footer-col">
                 <h4>Servicios</h4>
@@ -53,14 +53,14 @@
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul>
-                    <li><i class="fa-solid fa-phone"></i> +240 222 889 274</li>
-                    <li><i class="fa-solid fa-envelope"></i> info@mafesolucions.com</li>
-                    <li><i class="fa-solid fa-location-dot"></i> Santo Domingo, República Dominicana</li>
+                    <li><i class="fa-solid fa-phone"></i> +240 555 553 725</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@mafesolutions.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> La Ronda, Malabo. Guinea Ecuatorial</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; {% now "Y" %} MAFE Solucions. Todos los derechos reservados.</p>
+            <p>&copy; {% now "Y" %} MAFE Solutions. Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="{% static 'mafeapp/js/main.js' %}"></script>
