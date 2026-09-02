@@ -86,7 +86,7 @@ ul {
 .logo img {
     display: block;
     width: auto;
-    height: 54px;
+    height: 64px;
     max-width: 210px;
     object-fit: contain;
 }
@@ -109,6 +109,11 @@ ul {
 
 .nav-links a:hover {
     color: var(--color-accent);
+}
+
+.nav-links a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .nav-toggle {
@@ -171,6 +176,265 @@ ul {
 .hero-image i {
     font-size: 12rem;
     color: rgba(255, 255, 255, 0.15);
+}
+
+/* Inner pages */
+.page-hero {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    color: #fff;
+    padding: 4.5rem 0;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.6rem;
+    margin-top: 0.6rem;
+}
+
+.about-page {
+    padding: 5rem 0;
+}
+
+.about-page-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 4rem;
+    max-width: 960px;
+}
+
+.about-page-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    background: var(--color-light);
+    color: var(--color-primary);
+    font-size: 7rem;
+    border-radius: 16px;
+}
+
+.about-page-text h2 {
+    color: var(--color-dark);
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+.about-page-text p + p {
+    margin-top: 1.2rem;
+}
+
+.services-page {
+    padding: 5rem 0;
+}
+
+.services-page-intro {
+    max-width: 720px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+}
+
+.services-page-intro h2 {
+    color: var(--color-dark);
+    font-size: 2rem;
+    margin: 0.6rem 0 1rem;
+}
+
+.services-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+}
+
+.service-detail {
+    border: 1px solid #dce6ef;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.service-detail-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.service-detail-heading::-webkit-details-marker {
+    display: none;
+}
+
+.service-detail-heading::after {
+    content: '\f078';
+    color: var(--color-primary);
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: auto;
+    padding-top: 0.2rem;
+    transition: transform 0.2s ease;
+}
+
+.service-detail[open] .service-detail-heading::after {
+    transform: rotate(180deg);
+}
+
+.service-detail-content {
+    padding-top: 1.2rem;
+}
+
+.service-detail-heading i {
+    color: var(--color-accent);
+    font-size: 1.8rem;
+    padding-top: 0.2rem;
+}
+
+.service-detail h3 {
+    color: var(--color-dark);
+    font-size: 1.15rem;
+}
+
+.service-detail-content > p {
+    margin-bottom: 1.4rem;
+}
+
+.service-detail-list li {
+    margin-bottom: 1rem;
+}
+
+.service-detail-list strong {
+    color: var(--color-dark);
+}
+
+/* Contact and appointments */
+.contact-page {
+    padding: 5rem 0;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-details h2,
+.appointment-form h2 {
+    color: var(--color-dark);
+    font-size: 1.8rem;
+    margin: 0.6rem 0 1rem;
+}
+
+.contact-details > p {
+    margin-bottom: 1.8rem;
+}
+
+.contact-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.contact-list i {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: var(--color-light);
+    color: var(--color-primary);
+    border-radius: 10px;
+}
+
+.contact-list strong,
+.contact-list span {
+    display: block;
+}
+
+.contact-list strong {
+    color: var(--color-dark);
+}
+
+.contact-list a:hover {
+    color: var(--color-primary);
+}
+
+.appointment-form {
+    background: var(--color-light);
+    border-radius: 12px;
+    padding: 2.2rem;
+}
+
+.appointment-form > p {
+    margin-bottom: 1.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+}
+
+.form-field {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.form-field-full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    color: var(--color-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    border: 1px solid #c9d7e2;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--color-text);
+    font: inherit;
+    padding: 0.75rem 0.85rem;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--color-primary);
+    outline: 2px solid rgba(15, 92, 140, 0.15);
+}
+
+.form-error {
+    color: #b42318;
+    font-size: 0.82rem;
+}
+
+.form-success {
+    margin-bottom: 1.2rem;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    background: #e7f6ec;
+    color: #176b3a;
+}
+
+.appointment-form .btn {
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    margin-top: 1.4rem;
 }
 
 /* Stats */
@@ -411,12 +675,17 @@ ul {
 /* Responsive */
 @media (max-width: 900px) {
     .hero-inner,
-    .about-inner {
+    .about-inner,
+    .about-page-content {
         grid-template-columns: 1fr;
     }
 
     .hero-image {
         display: none;
+    }
+
+    .about-page-icon {
+        min-height: 200px;
     }
 
     .stats-inner {
@@ -429,6 +698,14 @@ ul {
 
     .reasons-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
     }
 
     .footer-inner {
@@ -446,7 +723,56 @@ ul {
         display: none;
     }
 
+    .main-nav {
+        position: relative;
+    }
+
+    .nav-links.open {
+        display: grid;
+        position: absolute;
+        top: calc(100% + 1rem);
+        right: 0;
+        width: min(280px, 92vw);
+        gap: 0;
+        padding: 0.5rem;
+        background: var(--color-primary-dark);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        box-shadow: 0 12px 24px rgba(10, 61, 94, 0.25);
+    }
+
+    .nav-links.open a {
+        display: block;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-links.open a.active {
+        border-bottom: 0;
+        background: rgba(242, 167, 27, 0.12);
+    }
+
     .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-page,
+    .about-page {
+        padding: 3.5rem 0;
+    }
+
+    .service-detail {
+        padding: 1.5rem;
+    }
+
+    .contact-page {
+        padding: 3.5rem 0;
+    }
+
+    .appointment-form {
+        padding: 1.5rem;
+    }
+
+    .form-grid {
         grid-template-columns: 1fr;
     }
 
@@ -459,8 +785,12 @@ ul {
         font-size: 2rem;
     }
 
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
     .logo img {
-        height: 44px;
-        max-width: 170px;
+        height: 54px;
+        max-width: 190px;
     }
 }

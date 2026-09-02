@@ -17,16 +17,16 @@
                 <img src="{% static 'mafeapp/img/logo.png' %}" alt="MAFE Solutions">
             </a>
             <nav class="main-nav">
-                <button class="nav-toggle" aria-label="Abrir menú">
+                <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <ul class="nav-links">
-                    <li><a href="{% url 'mafeapp:home' %}">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                <ul class="nav-links" id="main-menu">
+                    <li><a href="{% url 'mafeapp:home' %}"{% if request.resolver_match.url_name == 'home' %} class="active" aria-current="page"{% endif %}>Inicio</a></li>
+                    <li><a href="{% url 'mafeapp:servicios' %}"{% if request.resolver_match.url_name == 'servicios' %} class="active" aria-current="page"{% endif %}>Servicios</a></li>
+                    <li><a href="{% url 'mafeapp:nosotros' %}"{% if request.resolver_match.url_name == 'nosotros' %} class="active" aria-current="page"{% endif %}>Nosotros</a></li>
+                    <li><a href="{% url 'mafeapp:contacto' %}"{% if request.resolver_match.url_name == 'contacto' %} class="active" aria-current="page"{% endif %}>Contacto</a></li>
                 </ul>
-                <a href="#contacto" class="btn btn-primary nav-cta">Solicitar cita</a>
+                <a href="{% url 'mafeapp:contacto' %}" class="btn btn-primary nav-cta">Solicitar cita</a>
             </nav>
         </div>
     </header>

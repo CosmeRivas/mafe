@@ -9,7 +9,7 @@
             <h1>Tramitamos tu documentación legal, tú enfócate en tu proyecto de vida</h1>
             <p>Ayudamos a extranjeros y nacionales con pasaportes, visados, residencias, registro de impuestos, carnet de emprendedor y creación de negocios.</p>
             <div class="hero-actions">
-                <a href="#contacto" class="btn btn-primary">Solicitar cita</a>
+                <a href="{% url 'mafeapp:contacto' %}" class="btn btn-primary">Solicitar cita</a>
                 <a href="#servicios" class="btn btn-outline">Ver servicios</a>
             </div>
         </div>
@@ -24,10 +24,6 @@
         <div class="stat">
             <span class="stat-number">+500</span>
             <span class="stat-label">Trámites gestionados</span>
-        </div>
-        <div class="stat">
-            <span class="stat-number">+10</span>
-            <span class="stat-label">Años de experiencia</span>
         </div>
         <div class="stat">
             <span class="stat-number">+15</span>
@@ -132,7 +128,7 @@
     <div class="container cta-inner">
         <h2>¿Listo para empezar tu trámite?</h2>
         <p>Agenda una cita con nuestros asesores y resuelve tu situación legal sin complicaciones.</p>
-        <a href="tel:+240 555 553 725" class="btn btn-primary">Llámanos ahora</a>
+        <a href="{% url 'mafeapp:contacto' %}" class="btn btn-primary">Solicitar cita</a>
     </div>
 </section>
 {% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'mafeapp/base.html' %}
+
+{% block title %}Contacto y citas | MAFE Solutions{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <span class="badge">Estamos para ayudarte</span>
+        <h1>Contacto y solicitud de cita</h1>
+    </div>
+</section>
+
+<section class="contact-page">
+    <div class="container contact-layout">
+        <div class="contact-details">
+            <span class="eyebrow">Hablemos</span>
+            <h2>Estamos a tu disposición</h2>
+            <p>Solicita una cita y uno de nuestros asesores se pondrá en contacto contigo para confirmar los detalles.</p>
+            <ul class="contact-list">
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <div><strong>Teléfono y WhatsApp</strong><a href="https://wa.me/240555553725" target="_blank" rel="noopener">+240 555 553 725</a></div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <div><strong>Correo electrónico</strong><a href="mailto:info@mafesolutions.com">info@mafesolutions.com</a></div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div><strong>Localización</strong><span>La Ronda, Malabo, Guinea Ecuatorial</span></div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-clock"></i>
+                    <div><strong>Horario de atención</strong><span>De lunes a viernes, de 10:00 a 17:00</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="appointment-form">
+            <span class="eyebrow">Agenda tu cita</span>
+            <h2>Cuéntanos qué necesitas</h2>
+            <p>Indica la fecha y hora que prefieres. Confirmaremos la disponibilidad contigo.</p>
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="form-success">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <div class="form-grid">
+                    {% for field in form %}
+                        <div class="form-field {% if field.name == 'mensaje' or field.name == 'servicio' %}form-field-full{% endif %}">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {{ field }}
+                            {% for error in field.errors %}<span class="form-error">{{ error }}</span>{% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
