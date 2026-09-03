@@ -8,32 +8,32 @@ def home(request):
     servicios = [
         {
             'icono': 'fa-passport',
-            'titulo': 'Pasaportes',
-            'descripcion': 'Tramitación y renovación de pasaportes para nacionales y extranjeros.',
+            'titulo': 'Gestión Administrativa y Documental',
+            'descripcion': '',
         },
         {
             'icono': 'fa-stamp',
-            'titulo': 'Visados',
+            'titulo': 'Registro Civil y Certificaciones',
             'descripcion': 'Gestión de visados de turismo, trabajo, estudio y reunificación familiar.',
         },
         {
             'icono': 'fa-id-card',
-            'titulo': 'Residencias',
+            'titulo': '- Gestión Fiscal y Financiera',
             'descripcion': 'Solicitud y renovación de permisos de residencia legal.',
         },
         {
             'icono': 'fa-file-invoice-dollar',
-            'titulo': 'Registro en Impuestos',
+            'titulo': '- Cumplimiento Laboral y Nóminas',
             'descripcion': 'Registro y actualización ante el Ministerio de Hacienda / Impuestos.',
         },
         {
             'icono': 'fa-briefcase',
-            'titulo': 'Carnet de Emprendedor',
+            'titulo': '- Servicios de Extranjería e Inmigración',
             'descripcion': 'Tramitación del carnet de emprendedor para iniciar tu actividad económica.',
         },
         {
             'icono': 'fa-building',
-            'titulo': 'Creación de Negocios',
+            'titulo': 'Trámites Empresariales y Licencias',
             'descripcion': 'Asesoría integral para constituir y legalizar tu empresa.',
         },
     ]

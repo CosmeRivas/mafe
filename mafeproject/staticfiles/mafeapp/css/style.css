@@ -21,6 +21,10 @@ body {
     background: #fff;
 }
 
+p {
+    text-align: justify;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -160,6 +164,7 @@ ul {
     color: #dce6ef;
     margin-bottom: 2rem;
     max-width: 520px;
+    text-align: justify;
 }
 
 .hero-actions {
@@ -222,6 +227,11 @@ ul {
 
 .about-page-text p + p {
     margin-top: 1.2rem;
+    text-align: justify;
+}
+
+.about-page-text p {
+    text-align: justify;
 }
 
 .services-page {
@@ -232,6 +242,10 @@ ul {
     max-width: 720px;
     margin: 0 auto 3.5rem;
     text-align: center;
+}
+
+.services-page-intro p {
+    text-align: justify;
 }
 
 .services-page-intro h2 {
@@ -295,6 +309,12 @@ ul {
 
 .service-detail-content > p {
     margin-bottom: 1.4rem;
+    text-align: justify;
+}
+
+.service-detail-list {
+    list-style: disc;
+    padding-left: 1.5rem;
 }
 
 .service-detail-list li {
@@ -326,6 +346,7 @@ ul {
 
 .contact-details > p {
     margin-bottom: 1.8rem;
+    text-align: justify;
 }
 
 .contact-list {
@@ -371,6 +392,7 @@ ul {
 
 .appointment-form > p {
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .form-grid {
@@ -469,6 +491,10 @@ ul {
     margin: 0 auto 3rem;
 }
 
+.section-heading p {
+    text-align: justify;
+}
+
 .eyebrow {
     color: var(--color-accent);
     font-weight: 600;
@@ -499,6 +525,10 @@ ul {
     padding: 2.2rem 1.8rem;
     border-radius: 16px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card p {
+    text-align: justify;
 }
 
 .service-card:hover {
@@ -557,6 +587,10 @@ ul {
     margin: 0.6rem 0 1rem;
 }
 
+.about-text p {
+    text-align: justify;
+}
+
 .checklist li {
     display: flex;
     align-items: center;
@@ -583,6 +617,10 @@ ul {
     border: 1px solid #dce6ef;
     border-radius: 12px;
     padding: 1.8rem;
+}
+
+.reason-card p {
+    text-align: justify;
 }
 
 .reason-card i,
@@ -619,6 +657,10 @@ ul {
     margin: 0.8rem 0;
 }
 
+.purpose p {
+    text-align: justify;
+}
+
 /* CTA */
 .cta {
     background: var(--color-primary-dark);
@@ -635,6 +677,7 @@ ul {
 .cta p {
     color: #dce6ef;
     margin-bottom: 1.8rem;
+    text-align: justify;
 }
 
 /* Footer */
@@ -660,6 +703,7 @@ ul {
 .footer-col p {
     max-width: 320px;
     margin-top: 1rem;
+    text-align: justify;
 }
 
 .footer-col ul li {
