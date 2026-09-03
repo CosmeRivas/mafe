@@ -217,8 +217,8 @@ ul {
 .logo img {
     display: block;
     width: auto;
-    height: 64px;
-    max-width: 210px;
+    height: 84px;
+    max-width: 230px;
     object-fit: contain;
 }
 
