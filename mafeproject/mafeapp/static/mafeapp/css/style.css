@@ -8,6 +8,133 @@
     font-size: 16px;
 }
 
+/* Scroll animations */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+}
+
+.scroll-animate.active {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-animate.active.from-left {
+    animation-name: slideInFromLeft;
+}
+
+.scroll-animate.active.from-right {
+    animation-name: slideInFromRight;
+}
+
+.scroll-animate.active.from-bottom {
+    animation-name: slideInFromBottom;
+}
+
+.scroll-animate.active.from-top {
+    animation-name: slideInFromTop;
+}
+
+/* Reduce animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-animate,
+    .scroll-animate.active {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Stagger effects for elements in sequence */
+.hero-text .scroll-animate:nth-child(1) { animation-delay: 0s; }
+.hero-text .scroll-animate:nth-child(2) { animation-delay: 0.15s; }
+.hero-text .scroll-animate:nth-child(3) { animation-delay: 0.3s; }
+.hero-text .scroll-animate:nth-child(4) { animation-delay: 0.45s; }
+
+.services-grid .scroll-animate:nth-child(1) { animation-delay: 0s; }
+.services-grid .scroll-animate:nth-child(2) { animation-delay: 0.1s; }
+.services-grid .scroll-animate:nth-child(3) { animation-delay: 0.2s; }
+.services-grid .scroll-animate:nth-child(4) { animation-delay: 0.3s; }
+.services-grid .scroll-animate:nth-child(5) { animation-delay: 0.4s; }
+.services-grid .scroll-animate:nth-child(6) { animation-delay: 0.5s; }
+
+.reasons-grid .scroll-animate { animation-delay: 0.1s; }
+.reasons-grid .scroll-animate:nth-child(1) { animation-delay: 0s; }
+.reasons-grid .scroll-animate:nth-child(2) { animation-delay: 0.1s; }
+.reasons-grid .scroll-animate:nth-child(3) { animation-delay: 0.2s; }
+.reasons-grid .scroll-animate:nth-child(4) { animation-delay: 0.3s; }
+.reasons-grid .scroll-animate:nth-child(5) { animation-delay: 0.4s; }
+
+.stats-inner .scroll-animate:nth-child(1) { animation-delay: 0s; }
+.stats-inner .scroll-animate:nth-child(2) { animation-delay: 0.15s; }
+.stats-inner .scroll-animate:nth-child(3) { animation-delay: 0.3s; }
+
+.contact-list .scroll-animate:nth-child(1) { animation-delay: 0s; }
+.contact-list .scroll-animate:nth-child(2) { animation-delay: 0.1s; }
+.contact-list .scroll-animate:nth-child(3) { animation-delay: 0.2s; }
+.contact-list .scroll-animate:nth-child(4) { animation-delay: 0.3s; }
+
+.about-page-text .scroll-animate:nth-child(1) { animation-delay: 0s; }
+.about-page-text .scroll-animate:nth-child(2) { animation-delay: 0.15s; }
+.about-page-text .scroll-animate:nth-child(3) { animation-delay: 0.3s; }
+.about-page-text .scroll-animate:nth-child(4) { animation-delay: 0.45s; }
+
+.page-hero .scroll-animate:nth-child(1) { animation-delay: 0s; }
+.page-hero .scroll-animate:nth-child(2) { animation-delay: 0.15s; }
+
+.appointment-form .scroll-animate:nth-child(1) { animation-delay: 0s; }
+.appointment-form .scroll-animate:nth-child(2) { animation-delay: 0.15s; }
+.appointment-form .scroll-animate:nth-child(3) { animation-delay: 0.3s; }
+.appointment-form .scroll-animate:nth-child(4) { animation-delay: 0.45s; }
+
+form.scroll-animate {
+    animation-delay: 0.6s;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -236,12 +363,25 @@ ul {
 
 .services-page {
     padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(15, 92, 140, 0.02) 0%, rgba(242, 167, 27, 0.02) 100%);
 }
 
 .services-page-intro {
     max-width: 720px;
     margin: 0 auto 3.5rem;
     text-align: center;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .services-page-intro p {
@@ -252,18 +392,70 @@ ul {
     color: var(--color-dark);
     font-size: 2rem;
     margin: 0.6rem 0 1rem;
+    animation: fadeInScale 0.7s ease-out;
 }
 
 .services-detail-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.8rem;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.services-detail-grid .service-detail {
+    animation: slideUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.services-detail-grid .service-detail:nth-child(1) { animation-delay: 0.05s; }
+.services-detail-grid .service-detail:nth-child(2) { animation-delay: 0.1s; }
+.services-detail-grid .service-detail:nth-child(3) { animation-delay: 0.15s; }
+.services-detail-grid .service-detail:nth-child(4) { animation-delay: 0.2s; }
+.services-detail-grid .service-detail:nth-child(5) { animation-delay: 0.25s; }
+.services-detail-grid .service-detail:nth-child(6) { animation-delay: 0.3s; }
+.services-detail-grid .service-detail:nth-child(7) { animation-delay: 0.35s; }
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .service-detail {
-    border: 1px solid #dce6ef;
+    border: 2px solid #dce6ef;
     border-radius: 12px;
     padding: 2rem;
+    background: linear-gradient(135deg, #fff 0%, rgba(242, 167, 27, 0.02) 100%);
+    transition: all 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.service-detail:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 24px rgba(242, 167, 27, 0.12);
+    transform: translateY(-3px);
+}
+
+.service-detail[open] {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, #fff 0%, rgba(242, 167, 27, 0.05) 100%);
+    box-shadow: 0 8px 32px rgba(15, 92, 140, 0.15);
 }
 
 .service-detail-heading {
@@ -272,6 +464,7 @@ ul {
     gap: 1rem;
     cursor: pointer;
     list-style: none;
+    transition: all 0.2s ease;
 }
 
 .service-detail-heading::-webkit-details-marker {
@@ -280,36 +473,63 @@ ul {
 
 .service-detail-heading::after {
     content: '\f078';
-    color: var(--color-primary);
+    color: var(--color-accent);
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     margin-left: auto;
     padding-top: 0.2rem;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .service-detail[open] .service-detail-heading::after {
     transform: rotate(180deg);
+    color: var(--color-primary);
 }
 
 .service-detail-content {
     padding-top: 1.2rem;
+    animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .service-detail-heading i {
     color: var(--color-accent);
     font-size: 1.8rem;
     padding-top: 0.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-detail[open] .service-detail-heading i {
+    transform: scale(1.1);
+    color: var(--color-primary);
 }
 
 .service-detail h3 {
     color: var(--color-dark);
     font-size: 1.15rem;
+    transition: color 0.3s ease;
+}
+
+.service-detail[open] .service-detail h3 {
+    color: var(--color-primary);
 }
 
 .service-detail-content > p {
     margin-bottom: 1.4rem;
     text-align: justify;
+    line-height: 1.8;
+    color: var(--color-text);
 }
 
 .service-detail-list {
@@ -319,10 +539,22 @@ ul {
 
 .service-detail-list li {
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    padding-left: 0.5rem;
+}
+
+.service-detail-list li:hover {
+    padding-left: 1rem;
+    color: var(--color-primary);
+}
+
+.service-detail-list li:hover strong {
+    color: var(--color-accent);
 }
 
 .service-detail-list strong {
     color: var(--color-dark);
+    transition: color 0.2s ease;
 }
 
 /* Contact and appointments */
@@ -501,12 +733,26 @@ ul {
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 0.05em;
+    display: inline-block;
+    animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .section-heading h2 {
     font-size: 2rem;
     color: var(--color-dark);
     margin: 0.6rem 0 1rem;
+    animation: fadeInScale 0.7s ease-out;
 }
 
 /* Services */

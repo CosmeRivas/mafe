@@ -5,31 +5,31 @@
 <section class="hero">
     <div class="container hero-inner">
         <div class="hero-text">
-            <span class="badge">Gestoría de confianza</span>
-            <h1>Tramitamos tu documentación legal, tú enfócate en tu proyecto de vida</h1>
-            <p>Ayudamos a extranjeros y nacionales con pasaportes, visados, residencias, registro de impuestos, carnet de emprendedor y creación de negocios.</p>
-            <div class="hero-actions">
+            <span class="badge scroll-animate from-left">Gestoría de confianza</span>
+            <h1 class="scroll-animate from-left">Nos encargamos de tus trámites. Tú, de lo que realmente importa.</h1>
+            <p class="scroll-animate from-left">Gestionamos documentación, licencias, certificados y trámites de inmigración para que puedas avanzar sin perder tiempo entre formularios, citas y burocracia.</p>
+            <div class="hero-actions scroll-animate from-bottom">
                 <a href="{% url 'mafeapp:contacto' %}" class="btn btn-primary">Solicitar cita</a>
                 <a href="#servicios" class="btn btn-outline">Ver servicios</a>
             </div>
         </div>
         <div class="hero-image">
-            <i class="fa-solid fa-passport"></i>
+            <i class="fa-solid fa-passport scroll-animate from-right"></i>
         </div>
     </div>
 </section>
 
 <section class="stats">
     <div class="container stats-inner">
-        <div class="stat">
+        <div class="stat scroll-animate from-bottom">
             <span class="stat-number">+200</span>
             <span class="stat-label">Trámites gestionados</span>
         </div>
-        <div class="stat">
+        <div class="stat scroll-animate from-bottom">
             <span class="stat-number">+15</span>
             <span class="stat-label">Nacionalidades atendidas</span>
         </div>
-        <div class="stat">
+        <div class="stat scroll-animate from-bottom">
             <span class="stat-number">97%</span>
             <span class="stat-label">Clientes satisfechos</span>
         </div>
@@ -39,13 +39,13 @@
 <section class="services" id="servicios">
     <div class="container">
         <div class="section-heading">
-            <span class="eyebrow">Nuestros servicios</span>
-            <h2>Todo lo que necesitas para tu tramitación</h2>
-            <p>Acompañamos a nuestros clientes en cada etapa del proceso legal y administrativo.</p>
+            <span class="eyebrow scroll-animate from-top">Nuestros servicios</span>
+            <h2 class="scroll-animate from-top">Todo lo que necesitas para tu tramitación</h2>
+            <p class="scroll-animate from-top">Acompañamos a nuestros clientes en cada etapa del proceso legal y administrativo.</p>
         </div>
         <div class="services-grid">
             {% for servicio in servicios %}
-            <div class="service-card">
+            <div class="service-card scroll-animate from-bottom">
                 <div class="service-icon">
                     <i class="fa-solid {{ servicio.icono }}"></i>
                 </div>
@@ -60,14 +60,14 @@
 <section class="about" id="nosotros">
     <div class="container about-inner">
         <div class="about-image">
-            <i class="fa-solid fa-handshake"></i>
+            <i class="fa-solid fa-handshake scroll-animate from-left"></i>
         </div>
         <div class="about-text">
-            <span class="eyebrow">Nosotros</span>
-            <h2>Tu aliado estratégico en Guinea Ecuatorial</h2>
-            <p class="text-center">En Mafe Solutions brindamos soluciones integrales de consultoría administrativa, gestión documental, asesoramiento fiscal y cumplimiento migratorio para expatriados en Guinea Ecuatorial.</p>
-            <p>Nacemos con el propósito de ser el aliado estratégico de profesionales, emprendedores y empresas, optimizando sus procesos internos y garantizando que sus operaciones cumplan con el marco legal y regulatorio vigente.</p>
-            <p>Nos encargamos de la complejidad operativa y burocrática para que tú puedas concentrarte al 100% en hacer crecer tu negocio con total tranquilidad y respaldo profesional.</p>
+            <span class="eyebrow scroll-animate from-right">Nosotros</span>
+            <h2 class="scroll-animate from-right">Tu aliado estratégico en Guinea Ecuatorial</h2>
+            <p class="text-center scroll-animate from-right">En Mafe Solutions brindamos soluciones integrales de consultoría administrativa, gestión documental, asesoramiento fiscal y cumplimiento migratorio para expatriados en Guinea Ecuatorial.</p>
+            <p class="scroll-animate from-right">Nacemos con el propósito de ser el aliado estratégico de profesionales, emprendedores y empresas, optimizando sus procesos internos y garantizando que sus operaciones cumplan con el marco legal y regulatorio vigente.</p>
+            <p class="scroll-animate from-right">Nos encargamos de la complejidad operativa y burocrática para que tú puedas concentrarte al 100% en hacer crecer tu negocio con total tranquilidad y respaldo profesional.</p>
         </div>
     </div>
 </section>
@@ -75,32 +75,32 @@
 <section class="why-us">
     <div class="container">
         <div class="section-heading">
-            <span class="eyebrow">¿Por qué elegirnos?</span>
-            <h2>Convertimos desafíos en oportunidades de crecimiento</h2>
-            <p>Contamos con un equipo dinámico y altamente cualificado, comprometido en diseñar estrategias a la medida de tus necesidades operativas y comerciales.</p>
+            <span class="eyebrow scroll-animate from-left">¿Por qué elegirnos?</span>
+            <h2 class="scroll-animate from-left">Convertimos desafíos en oportunidades de crecimiento</h2>
+            <p class="scroll-animate from-left">Contamos con un equipo dinámico y altamente cualificado, comprometido en diseñar estrategias a la medida de tus necesidades operativas y comerciales.</p>
         </div>
         <div class="reasons-grid">
-            <article class="reason-card">
+            <article class="reason-card scroll-animate from-bottom">
                 <i class="fa-solid fa-user-check"></i>
                 <h3>Atención personalizada y directa</h3>
                 <p>Diseñamos soluciones a la medida de las necesidades reales de tu negocio, sin fórmulas genéricas.</p>
             </article>
-            <article class="reason-card">
+            <article class="reason-card scroll-animate from-bottom">
                 <i class="fa-solid fa-shield-halved"></i>
                 <h3>Rigurosidad y cumplimiento</h3>
                 <p>Gestionamos tus obligaciones fiscales, laborales y administrativas con precisión para evitar sanciones y contingencias.</p>
             </article>
-            <article class="reason-card">
+            <article class="reason-card scroll-animate from-bottom">
                 <i class="fa-solid fa-list-check"></i>
                 <h3>Eficiencia y orden operativo</h3>
                 <p>Transformamos la gestión documental y los procesos internos en sistemas claros, estructurados y ágiles.</p>
             </article>
-            <article class="reason-card">
+            <article class="reason-card scroll-animate from-bottom">
                 <i class="fa-solid fa-lock"></i>
                 <h3>Confidencialidad y ética</h3>
                 <p>Tratamos la información de tu empresa con el más alto nivel de seguridad, reserva y compromiso profesional.</p>
             </article>
-            <article class="reason-card">
+            <article class="reason-card scroll-animate from-bottom">
                 <i class="fa-solid fa-chart-line"></i>
                 <h3>Enfoque en tu crecimiento</h3>
                 <p>Nos ocupamos de los trámites y la operatividad diaria para que puedas liderar tu proyecto con tranquilidad.</p>
@@ -111,12 +111,12 @@
 
 <section class="purpose">
     <div class="container purpose-grid">
-        <article>
+        <article class="scroll-animate from-left">
             <i class="fa-solid fa-bullseye"></i>
             <h2>Misión</h2>
             <p>Ofrecer servicios de consultoría y gestión administrativa de alta calidad, caracterizados por la precisión, la confidencialidad y la eficiencia. Buscamos simplificar la carga operativa de nuestros clientes mediante procesos estructurados y un acompañamiento cercano que garantice su cumplimiento normativo y sostenibilidad financiera.</p>
         </article>
-        <article>
+        <article class="scroll-animate from-right">
             <i class="fa-solid fa-eye"></i>
             <h2>Visión</h2>
             <p>Ser reconocidos como la firma de consultoría y servicios administrativos de referencia por nuestra excelencia operativa, ética profesional y capacidad para impulsar el orden y crecimiento sostenible de los negocios a los que servimos.</p>
@@ -126,9 +126,9 @@
 
 <section class="cta">
     <div class="container cta-inner">
-        <h2>¿Listo para empezar tu trámite?</h2>
-        <p>Agenda una cita con nuestros asesores y resuelve tu situación legal sin complicaciones.</p>
-        <a href="{% url 'mafeapp:contacto' %}" class="btn btn-primary">Solicitar cita</a>
+        <h2 class="scroll-animate from-top">¿Listo para empezar tu trámite?</h2>
+        <p class="scroll-animate from-top">Agenda una cita con nuestros asesores y resuelve tu situación legal sin complicaciones.</p>
+        <a href="{% url 'mafeapp:contacto' %}" class="btn btn-primary scroll-animate from-bottom">Solicitar cita</a>
     </div>
 </section>
 {% endblock %}

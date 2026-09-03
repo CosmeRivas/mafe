@@ -9,32 +9,32 @@ def home(request):
         {
             'icono': 'fa-passport',
             'titulo': 'Gestión Administrativa y Documental',
-            'descripcion': '',
+            'descripcion': 'Gestión y seguimiento de trámites administrativos y documentación personal o empresarial.',
         },
         {
             'icono': 'fa-stamp',
             'titulo': 'Registro Civil y Certificaciones',
-            'descripcion': 'Gestión de visados de turismo, trabajo, estudio y reunificación familiar.',
+            'descripcion': ' Solicitud y gestión de certificados y documentos oficiales del Registro Civil',
         },
         {
             'icono': 'fa-id-card',
-            'titulo': '- Gestión Fiscal y Financiera',
-            'descripcion': 'Solicitud y renovación de permisos de residencia legal.',
+            'titulo': 'Gestión Fiscal y Financiera',
+            'descripcion': 'Asesoramiento y gestión de obligaciones fiscales, tributarias y financieras',
         },
         {
             'icono': 'fa-file-invoice-dollar',
-            'titulo': '- Cumplimiento Laboral y Nóminas',
-            'descripcion': 'Registro y actualización ante el Ministerio de Hacienda / Impuestos.',
+            'titulo': 'Cumplimiento Laboral y Nóminas',
+            'descripcion': ' Gestión de nóminas, obligaciones laborales y trámites ante los organismos correspondientes.',
         },
         {
             'icono': 'fa-briefcase',
-            'titulo': '- Servicios de Extranjería e Inmigración',
-            'descripcion': 'Tramitación del carnet de emprendedor para iniciar tu actividad económica.',
+            'titulo': 'Servicios de Extranjería e Inmigración',
+            'descripcion': 'Asesoramiento y gestión de permisos de residencia, trabajo y otros trámites migratorios.',
         },
         {
             'icono': 'fa-building',
             'titulo': 'Trámites Empresariales y Licencias',
-            'descripcion': 'Asesoría integral para constituir y legalizar tu empresa.',
+            'descripcion': 'Asesoría para constituir, regularizar y gestionar tu empresa y sus licencias.',
         },
     ]
     return render(request, 'mafeapp/home.html', {'servicios': servicios})

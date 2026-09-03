@@ -46,12 +46,17 @@
             <div class="footer-col">
                 <h4>Servicios</h4>
                 <ul>
-                    <li>Pasaportes</li>
-                    <li>Visados</li>
-                    <li>Residencias</li>
-                    <li>Registro de Impuestos</li>
-                    <li>Carnet de Emprendedor</li>
-                    <li>Creación de Negocios</li>
+                     {% for servicio in servicios %}
+                    <li>{{ servicio.titulo }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +240 555 553 725</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@mafesolutions.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> La Ronda, Malabo. Guinea Ecuatorial</li>
                 </ul>
             </div>
             <div class="footer-col">
