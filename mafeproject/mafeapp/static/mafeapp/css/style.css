@@ -217,9 +217,10 @@ ul {
 .logo img {
     display: block;
     width: auto;
-    height: 84px;
-    max-width: 230px;
+    height: 130px;
+    max-width: 280px;
     object-fit: contain;
+    margin-top: 10px;
 }
 
 .main-nav {
@@ -1080,7 +1081,7 @@ ul {
     }
 
     .logo img {
-        height: 54px;
-        max-width: 190px;
+        height: 94px;
+        max-width: 210px;
     }
 }
